@@ -1,0 +1,73 @@
+/* Light Theme */
+.theme-light {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f8f9fa;
+    --text-color: #34495e;
+    --border-color: #e0e0e0;
+    --button-bg: #f0f0f0;
+    --button-text: #333333;
+    --button-hover-bg: #e0e0e0;
+    --button-active-bg: #d0d0d0;
+    --header-bg: #ffffff;
+    --footer-bg: #f8f9fa;
+}
+
+/* Dark Theme */
+.theme-dark {
+    --primary-color: #4a90e2;
+    --secondary-color: #2ecc71;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --border-color: #333333;
+    --button-bg: #333333;
+    --button-text: #e0e0e0;
+    --button-hover-bg: #404040;
+    --button-active-bg: #505050;
+    --header-bg: #222222;
+    --footer-bg: #222222;
+}
+
+/* Cyber Theme */
+.theme-cyber {
+    --primary-color: #00ff00;
+    --secondary-color: #ff00ff;
+    --background-color: #000000;
+    --text-color: #00ff00;
+    --border-color: #00ff00;
+    --button-bg: #000000;
+    --button-text: #00ff00;
+    --button-hover-bg: #001100;
+    --button-active-bg: #002200;
+    --header-bg: #000000;
+    --footer-bg: #000000;
+}
+
+.theme-cyber {
+    text-shadow: 0 0 5px var(--text-color);
+}
+
+.theme-cyber .button,
+.theme-cyber .mapping-button,
+.theme-cyber .navigation-button,
+.theme-cyber .direction-button {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.theme-cyber header,
+.theme-cyber footer,
+.theme-cyber .status-box,
+.theme-cyber .map-display {
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+/* Apply header and footer backgrounds for all themes */
+header {
+    background-color: var(--header-bg);
+}
+
+footer {
+    background-color: var(--footer-bg);
+}

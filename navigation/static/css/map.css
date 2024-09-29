@@ -1,0 +1,32 @@
+.navigation-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+.navigation-controls select {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    border: 2px solid var(--border-color);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navigation-controls select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.map-display {
+    height: calc(100vh - 200px);
+    max-height: 400px;
+    background-color: #e9ecef;
+    margin: 1rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--shadow-color);
+}

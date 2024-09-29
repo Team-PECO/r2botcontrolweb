@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}R2봇 제어센터{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
-<body>
+<body class="theme-light">
     <header>
+        {% block back_button %}{% endblock %}
         <h1>{% block header %}R2봇 제어센터{% endblock %}</h1>
-        <button id="theme-toggle" class="theme-toggle">🌓</button>
+        <select id="theme-select" class="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="cyber">Cyber</option>
+        </select>
     </header>
 
-    <main>
+    <div class="content-wrapper">
         {% block content %}{% endblock %}
-    </main>
+    </div>
 
     <footer>
-        <p>Powered by Peco <img src="{% static 'images/peco_logo.png' %}" alt="Peco Logo"></p>
+        <p>Powered by Peco <img src="{% static '../static/images/logo.svg' %}" alt="Peco Logo"></p>
     </footer>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -21,7 +21,9 @@
 </div>
 <button id="start-mapping" class="mapping-button">매핑 시작</button>
 {% endblock %}
-
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/control.css' %}">
+{% endblock %}
 {% block extra_js %}
 <script src="{% static 'js/control.js' %}"></script>
 {% endblock %}
