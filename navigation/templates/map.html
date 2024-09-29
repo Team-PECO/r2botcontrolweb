@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}R2봇 제어센터 - 자율 주행 모드{% endblock %}
+
+{% block header %}
+<a href="{% url 'home' %}" class="back-button">←</a>
+자율 주행 모드
+{% endblock %}
+
+{% block content %}
+<div class="navigation-controls">
+    <select id="start-point">
+        <option value="">시작 지점 선택</option>
+    </select>
+    <select id="end-point">
+        <option value="">도착 지점 선택</option>
+    </select>
+</div>
+<div id="map" class="map-display"></div>
+<button id="start-navigation" class="navigation-button" disabled>주행 시작</button>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="{% static 'js/map.js' %}"></script>
+{% endblock %}

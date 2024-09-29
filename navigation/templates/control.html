@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}R2봇 제어센터 - 수동 조종{% endblock %}
+
+{% block header %}
+<a href="{% url 'home' %}" class="back-button">←</a>
+수동 조종
+{% endblock %}
+
+{% block content %}
+<div class="control-pad">
+    <button id="up" class="direction-button">↑</button>
+    <button id="left" class="direction-button">←</button>
+    <button id="right" class="direction-button">→</button>
+    <button id="down" class="direction-button">↓</button>
+</div>
+<div class="status-box">
+    <h2>로봇 상태</h2>
+    <p id="robot-status">연결 대기 중...</p>
+</div>
+<button id="start-mapping" class="mapping-button">매핑 시작</button>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/control.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}R2봇 제어센터 - 홈{% endblock %}
+
+{% block content %}
+<div class="robot-display">
+    <!-- 3D model will be inserted here -->
+</div>
+<div class="control-buttons">
+    <a href="{% url 'control' %}" class="button">수동</a>
+    <a href="{% url 'map' %}" class="button">자동</a>
+</div>
+<div class="description">
+    <p>R2봇 제어센터에 오신 것을 환영합니다. 이 웹사이트에서는 로봇을 수동으로 조종하거나 자율 주행 모드를 설정할 수 있습니다.</p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="{% static 'js/robot-model.js' %}"></script>
+{% endblock %}
