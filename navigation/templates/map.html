@@ -10,14 +10,44 @@
 
 {% block content %}
 <div class="navigation-controls">
+    <div class="navigation-controls">
     <select id="start-point">
         <option value="">시작 지점 선택</option>
+        <option value="창의디자인실" data-coords="147,73">창의디자인실</option>
+        <option value="과학실">과학실</option>
+        <option value="보건실">보건실</option>
+        <option value="회의실">회의실</option>
+        <option value="교장실" data-coords="1272,323">교장실</option>
+        <option value="행정실">행정실</option>
+        <option value="1-1반">1-1반</option>
+        <option value="1-2반">1-2반</option>
+        <option value="1-3반">1-3반</option>
+        <option value="1-4반">1-4반</option>
     </select>
+
     <select id="end-point">
         <option value="">도착 지점 선택</option>
+        <option value="창의디자인실" data-coords="147,73">창의디자인실</option>
+        <option value="과학실">과학실</option>
+        <option value="보건실">보건실</option>
+        <option value="회의실">회의실</option>
+        <option value="교장실" data-coords="1272,323">교장실</option>
+        <option value="행정실">행정실</option>
+        <option value="1-1반">1-1반</option>
+        <option value="1-2반">1-2반</option>
+        <option value="1-3반">1-3반</option>
+        <option value="1-4반">1-4반</option>
     </select>
 </div>
-<div id="map" class="map-display"></div>
+</div>
+
+<!-- Map and Canvas for drawing the lines -->
+<div class="map-container">
+    <img id="school-map" src="{% static '../static/images/map.png' %}" alt="Map" class="map-display">
+
+    <canvas id="map-canvas"></canvas>
+</div>
+
 <button id="start-navigation" class="navigation-button" disabled>주행 시작</button>
 {% endblock %}
 
@@ -26,6 +56,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="{% static 'js/map.js' %}"></script>
 {% endblock %}

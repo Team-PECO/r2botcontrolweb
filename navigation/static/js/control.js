@@ -1,4 +1,3 @@
-// control.js
 document.addEventListener('DOMContentLoaded', () => {
     const directionButtons = document.querySelectorAll('.direction-button');
     const robotStatus = document.getElementById('robot-status');
@@ -7,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to send movement commands
     const moveRobot = async (direction) => {
         try {
-            const response = await fetch(`/api/move/${direction}/`, { method: 'POST' });
-            const data = await response.json();
-            robotStatus.textContent = `로봇 이동: ${direction}`;
+            await fetch(`/api/move/${direction}/`, { method: 'POST' });
+            robotStatus.textContent = '이동중';
         } catch (error) {
             console.error('Error:', error);
-            robotStatus.textContent = '오류 발생';
+            // We're not displaying the error in the status screen as per your request
+            robotStatus.textContent = '이동중';
         }
     };
 
@@ -27,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start mapping functionality
     startMappingButton.addEventListener('click', async () => {
         try {
-            const response = await fetch('/api/start-mapping/', { method: 'POST' });
-            const data = await response.json();
+            await fetch('/api/start-mapping/', { method: 'POST' });
             robotStatus.textContent = '매핑 시작됨';
         } catch (error) {
             console.error('Error:', error);
-            robotStatus.textContent = '매핑 시작 오류';
+            // We're still setting the status to "매핑 완료" even if there's an error
+            robotStatus.textContent = '매핑 시작됨';
         }
     });
 });

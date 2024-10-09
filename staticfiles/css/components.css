@@ -1,0 +1,117 @@
+:root {
+    --button-bg: #f0f0f0;
+    --button-text: #333333;
+    --button-hover-bg: #e0e0e0;
+    --button-active-bg: #d0d0d0;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.button:active {
+    background-color: var(--button-active-bg);
+    transform: translateY(1px);
+}
+
+.theme-toggle, .back-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 1001;
+}
+
+.theme-toggle:hover, .back-button:hover {
+    color: var(--button-hover-bg);
+}
+
+.mapping-button, .navigation-button {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mapping-button:hover, .navigation-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.mapping-button:active, .navigation-button:active {
+    background-color: var(--button-active-bg);
+    transform: translateY(1px);
+}
+
+.navigation-button:disabled {
+    background-color: #f0f0f0;
+    color: #999999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.direction-button {
+    aspect-ratio: 1;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.direction-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.direction-button:active {
+    background-color: var(--button-active-bg);
+    transform: translateY(1px);
+}
+
+.theme-select {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-select:hover {
+    background-color: var(--button-hover-bg);
+}
